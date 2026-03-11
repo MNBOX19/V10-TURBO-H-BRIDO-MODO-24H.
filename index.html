@@ -951,7 +951,11 @@
                 if(this.zone===3) { this.zone=2; this.syncFocusToPlaying(); this.updateFocus(); return; }
                 if(this.zone===2) { 
                     if(App.currentMode === 'series' && App.fullData.length > 0 && App.fullData[0].is_episode) {
-                        App.fullData = App.seriesDataCache; App.renderList(true); App.idx = App.lastSeriesIdx; App.updateFocus(); return;
+                        App.fullData = App.seriesDataCache; 
+                        App.idx = App.lastSeriesIdx; 
+                        App.renderList(true); 
+                        App.updateFocus(); 
+                        return;
                     }
                     this.zone=0; this.idx=this.lastCatIdx; this.updateFocus(); return; 
                 }
